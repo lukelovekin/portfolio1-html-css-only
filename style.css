@@ -1,0 +1,449 @@
+
+/* backround */
+body {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    background-image: url(./images/woody.jpg) ;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    align-items: center;
+}
+
+/* links */
+a:link {
+    color: black;
+}
+a:visited {
+    color: black;
+}
+
+/* sidebar for little screens not visible on bigger screens */
+.smallscreentoggle {
+    display: none;
+}
+/* the main whole grid */
+#mainpadding {
+    position: relative;
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr 2fr 2fr 2fr 2fr;
+    grid-template-rows: 1fr 2fr 2fr 2fr 2fr;
+    grid-template-areas: 
+    "head head head head head head head"
+    "side pic pic one one one st"
+    "side pic pic two two two st"
+    "side ab ab five five pic2 pic2"
+    "side ab ab five five pic2 pic2";
+    grid-gap: 8px;
+    width: 80vw;
+    height: 85vh;
+    max-width: 1200px;
+    text-align: center;
+	font-size: 1em;
+    font-family: Source Sans Pro;
+    font-size: 1.5;
+    font-weight: 500;
+    color: black;
+    opacity: .90;   
+}
+
+header {
+    border-radius: 10px; 
+    display: flex;
+    padding: 0 20px;
+    align-items: center;
+    justify-content: space-between;
+    grid-area: head;
+    grid-column: span;
+    background-color: rgba(182, 179, 179, 0.603);
+    font-size: 1.5em;
+}
+
+.sidebar {
+    
+    font-size: 1.25em;
+    border-radius: 10px; 
+    grid-area: side;
+    display: flex;
+    background-color:rgba(182, 179, 179, 0.603);
+    list-style: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/* main page pictures */
+#face, #pic2 {
+    border-radius: 10px; 
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    opacity: .95;
+}
+
+/* main picture grid */
+#pic  {
+    border-radius: 10px; 
+    grid-area: pic;
+}
+
+/* images/ programming languages icons */
+img {
+    object-fit: cover;
+    width: 90%;
+}
+
+/* resume grid */
+#resume {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px; 
+    background-color: rgba(182, 179, 179, 0.603) ;
+    grid-area: one;
+    font-size: 1.5em;
+}
+
+/* stack grid */
+#stack { 
+    border-radius: 10px; 
+    display: grid;
+    grid-area: st;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "p1 p2 p3"
+    "p4 p5 p6"
+    "p7 p8 p9";
+    align-items: center;
+}
+
+/* stack icons grid setup */
+img:first-child{
+    grid-area: p1;
+}
+img:nth-child(2){
+    grid-area: p2;  
+}
+#stack:nth-child(3){
+    grid-area: p3;  
+}
+#stack:nth-child(4){
+    grid-area: p4;
+}
+#stack:nth-child(5){
+    grid-area: p5;
+}
+img:nth-child(6){
+    grid-area: p6;  
+}
+#stack:nth-child(7){
+    grid-area: p7;  
+}
+#stack:nth-child(8){
+    grid-area: p8;
+}
+#stack:nth-child(9){
+    grid-area: p9;
+}
+
+/* about grid */
+#about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px; 
+    background-color: rgba(182, 179, 179, 0.603);
+    grid-area: ab;
+    font-size: 1.5em;
+}
+
+/* other picture grid */
+#pic2 {
+    border-radius: 10px; 
+    grid-area: pic2;
+    background-color: rgb(255, 255, 255);
+}
+
+/* tech portfolio grid */
+#tech {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px; 
+    grid-area: two;
+    background-color: rgba(182, 179, 179, 0.603);
+    font-size: 1.5em;
+}
+
+/* blog grid */
+#news {
+     display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px; 
+    grid-area: five;
+    background-color: rgba(182, 179, 179, 0.603);
+    font-size: 1.5em;
+}
+
+footer {
+    position: absolute;
+    bottom: 0px;
+    left: -19px;
+    padding: 0 20px;
+    font-size: 10px;
+}
+
+/* backgorund animation  START*/
+.box-area{
+    position: absolutere;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+.box-area li{
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 25px;
+    height: 25px;
+    background: rgba(255,255,255,0.2);
+    animation: animate 20s linear infinite;
+    bottom: -150px;
+}
+.box-area li:nth-child(1){
+    left:25%;
+    width: 80px;
+    height: 80px;
+    animation-delay:0s;
+}
+.box-area li:nth-child(2){
+    left:12%;
+    width: 30px;
+    height: 30px;
+    animation-delay:1.5s;
+    animation-duration: 10s;
+}
+.box-area li:nth-child(3){
+    left:70%;
+    width: 100x;
+    height: 100px;
+    animation-delay:5.5s;
+    /* animation-duration: 10s; */
+}
+.box-area li:nth-child(4){
+    left:42%;
+    width: 150x;
+    height: 150px;
+    animation-delay:0s;
+    animation-duration: 15s;
+}
+.box-area li:nth-child(5){
+    left:65%;
+    width: 40px;
+    height: 40px;
+    animation-delay:0s;
+    /* animation-duration: 10s; */
+}
+.box-area li:nth-child(6){
+    left:15%;
+    width: 110x;
+    height: 110px;
+    animation-delay:3.5s;
+    /* animation-duration: 10s; */
+}
+@keyframes animate{
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+        100%{
+        transform: translateY(-1000px) rotate(90deg);
+        opacity: 1;
+    }
+}
+/* background animation END */
+
+/* responsivness for a bigger desktop */
+@media screen and (min-width: 1350px){
+    body {
+        background-size: 100vw;
+    }
+}
+
+/* responsivness for a small desktop - tablet */
+@media screen and (max-width: 960px){
+    #mainpadding {
+        width: 100vw;
+    }
+}
+
+/* responsivness for a small tablet phone phone */
+/* changing the grid layout for a smaller screen */
+@media screen and (max-width: 700px){
+   
+    #mainpadding {           
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 2fr 2fr 2fr 2fr .1fr;
+        grid-template-areas: 
+        "head head"
+        "pic one"
+        "pic tech"
+        "e1 three"
+        "e2 st"
+        "foot foot";
+        font-size: 1em;
+        font-family: Source Sans Pro;
+        color: black;
+    }
+
+    header {
+        font-size: 1em;
+    }
+
+    #tname {
+        display: none;
+    }
+
+    .smallscreentoggle {
+        display: unset;
+    }
+
+    .sidebar {
+    display: none;
+  
+    }
+    #pic {
+    grid-area: pic;
+    }
+
+    #resume {
+    grid-area: one;
+    }
+
+    #stack { 
+    grid-area: st;
+
+    }
+    #about {
+    grid-area: three;
+    }
+
+    #pic2 {
+    display: none;
+    }
+
+    #tech {
+    grid-area: tech ;
+    }
+
+    #news {
+    grid-area: e1;
+    }
+
+    #e2 {
+    grid-area: e2;
+    }
+
+    footer {
+    grid-area: foot;
+    font-size: .5em;}
+    
+/*  DROP DOWN BAR START */
+/* Button styling */
+.menu-toggle {
+    display: inline-block;
+    padding: .75em 15px;
+    line-height: 1em;
+    font-size: 1em;
+    color: #333;
+}
+.menu-toggle:hover,
+.menu-toggle:focus {
+  color: rgb(71, 70, 70);
+}
+
+.main-menu {
+    position: absolute;
+    display: none;
+    left: -200px;
+    top: 0;
+    height: 100%;
+	overflow-y: scroll;
+	overflow-x: visible;
+	transition: left 0.3s ease,
+	box-shadow 0.3s ease;
+	z-index: 999;
+}
+
+.main-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 2.5em 0 0;
+    /* Hide shadow -8px while 'closed' */
+    -webkit-box-shadow: -8px 0 8px rgba(0,0,0,.5);
+    -moz-box-shadow: -8px 0 8px rgba(0,0,0,.5);
+    box-shadow: -8px 0 8px rgba(0,0,0,.5);
+    min-height: 100%;
+    width: 200px;
+    background: #1a1a1a;
+}
+
+/* only show on small screen as toggle icon */
+.main-menu a {
+    display: block;
+    padding: .75em 15px;
+    line-height: 1em;
+    font-size: 1em;
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 1px solid #383838;
+}
+
+.main-menu li:first-child a {
+    border-top: 1px solid #383838;
+}
+
+.main-menu a:hover,
+.main-menu a:focus {
+    background: #333;
+    text-decoration: underline;
+}
+
+.main-menu .menu-close {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.main-menu:target,
+.main-menu[aria-expanded="true"] {
+    display: block;
+    left: 0;
+    outline: none;
+    -moz-box-shadow: 3px 0 12px rgba(0,0,0,.25);
+    -webkit-box-shadow: 3px 0 12px rgba(0,0,0,.25);
+    box-shadow: 3px 0 12px rgba(0,0,0,.25);
+}
+
+.main-menu:target .menu-close,
+.main-menu[aria-expanded="true"] .menu-close {
+    z-index: 1001;
+}
+/* DROP DOWN END */
+
+/* Mobile screen  */
+@media screen and (max-width: 400px){    
+    #mainpadding {         
+        width: 100vw;
+    }
+}
+}

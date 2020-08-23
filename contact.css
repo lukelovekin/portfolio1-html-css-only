@@ -1,0 +1,381 @@
+/* background, behind grid */
+body {
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    height: 100vh;
+    background-image: url(./images/woody.jpg) ;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    align-items: center;
+    background-size: cover;
+}
+
+/* sidebar for little screens not visible on bigger screens */
+.smallscreentoggle {
+    display: none;
+}
+
+/* non home page grid layout */
+#mainpadding {
+    position: relative;
+    display: grid;
+    grid-template-columns: 2fr 12fr;
+    grid-template-rows: 1fr 8fr;
+    grid-template-areas: 
+    "head head"
+    "side con";
+    grid-gap: 8px;
+    width: 80vw;
+    height: 85vh;
+    max-width: 1200px;
+	  text-align: center;
+	  font-size: 1em;
+    font-family: Source Sans Pro;
+    font-size: 1.5;
+    font-weight: 600;
+    color: black;
+    opacity: .85;   
+}
+
+header { 
+    border-radius: 10px; 
+    display: flex;
+    padding: 0 20px;
+    align-items: center;
+    justify-content: space-between;
+    grid-area: head;
+    grid-column: span;
+    background-color: rgb(182, 179, 179, 0.603);
+    font-size: 1.5em;
+    height: 90px;
+}
+
+.sidebar {
+    border-radius: 10px; 
+    grid-area: side;
+    display: flex;
+    background-color:rgb(182, 179, 179, 0.603);
+    list-style: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 1.25em;
+}
+
+/* visited links */
+a:visited {
+  color: black;
+}
+
+/* main content grid to other the non main pages
+ */
+#resume2, #about, #news, #tech {
+    border-radius: 10px; 
+    grid-area: con;
+}
+
+/* main content to contact page */
+#contactmain {
+    grid-area: con;
+    align-items: center;
+}
+#contact {
+    display: flex;
+    align-items: center;
+    flex-direction: column; 
+}
+
+footer {
+    position: absolute;
+    bottom: -3px;
+    left: -19px;
+    display: flex;
+    padding: 0 20px;
+    font-size: 10px;
+    }
+/* fix footer its in a different spot */
+
+
+/* Contact Form */
+input[type=text], select, textarea {
+    width: 300px;
+    padding: 12px; 
+    border-radius: 6px; 
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px;
+    margin-bottom: 16px; 
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+    border: none;
+    background-color: rgba(66, 66, 66, 0.603);
+    color: rgb(255, 255, 255);
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, change color*/
+input[type=submit]:hover {
+    background-color: #575c57;
+}
+
+/* Add a background color and some padding around the form */
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+/* about page main content grid setup */
+#about {
+    display: flex;
+    flex-wrap: wrap;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: .20fr .20fr .20fr .20fr .20fr;
+    grid-template-areas: 
+    "head head"
+    "one two"
+    "three four"
+    "five six"
+    "seven eight";
+    align-items: center;
+    background-color: rgba(182, 179, 179, 0.603);
+}
+/* about images */
+#aboutham, #aboutgam, #aboutmic, #aboutfoo {
+    text-align: center;
+}
+#about > #ah3 {
+    grid-area: head;
+}
+#about > #p1 {
+    grid-area: one;
+}
+#about > #aboutham {
+    grid-area: two;
+}
+#about > #aboutgam {
+   grid-area: three;
+}
+#about > #p2 {
+    grid-area: four;
+}
+#about > #p3 {
+    grid-area: five;
+}
+#about > #aboutmic {
+    grid-area: six;
+}
+#about > #aboutfoo {
+    grid-area: seven;
+}
+#about > #p4 {
+    grid-area: eight;
+}
+
+/* tech portfolio main content page */
+#tech {
+    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100px 1fr 1fr;
+    grid-template-areas: 
+    "title title title"
+    "pro1 bla1 pro2"
+    "bla2 pro3 bla3";
+    grid-gap: 8px;
+    align-items: flex-start;
+}
+#tech {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+/* images in tech portfolio page */
+#tech img {
+  width: 400px;
+  border-radius: 10px;
+}
+#t1 {
+  border-radius: 5px;
+  grid-area: pro1;
+  background-color:rgba(182, 179, 179, 0.603)
+}
+/* tech portfolio grids */
+#t2 {
+  border-radius: 5px;
+  grid-area: bla1;
+  background-color:rgba(182, 179, 179)
+}
+#t3 {
+  border-radius: 5px;
+  grid-area: pro2;
+  background-color:rgba(182, 179, 179, 0.603);
+}
+
+/* blog main content grid */
+#news {
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: space-evenly;
+}
+/* blog main imags */
+#news img {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+}
+
+/* responsivness for a bigger desktop */
+@media screen and (min-width: 1350px){
+    body {
+        background-size: 100vw;
+    }
+}
+
+/* responsivness for a small desktop - tablet */
+@media screen and (max-width: 960px) and (min-width: 401px){
+    #mainpadding {
+        width: 100vw;
+    }
+}
+
+/* responsivness for a small tablet phone phone */
+/* changing the grid layout for a smaller screen */
+@media screen and (max-width: 700px){
+   
+#mainpadding {           
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 8fr;
+    grid-template-areas: 
+    "head"
+    "con";
+    font-size: 1em;
+    font-family: Source Sans Pro;
+    color: black;
+    width: 80vw;
+}
+
+header { 
+    grid-area: head;
+    font-size: 1em;
+}
+ 
+/* small screen toggle menu in header for small screens */
+.smallscreentoggle {
+    display: unset ;
+}
+
+#tname{
+    display: none;
+}
+
+/* hide sidebar */
+.sidebar {
+    display: none;
+}
+
+#contact {
+    grid-area: con;
+}
+
+/*  DROP DOWN BAR START */
+/* Button styling */
+.menu-toggle {
+    display: inline-block;
+    padding: .75em 15px;
+    line-height: 1em;
+    font-size: 1em;
+    color: #333;
+}
+
+.menu-toggle:hover,
+.menu-toggle:focus {
+    color: rgb(46, 46, 46);
+}
+
+.main-menu {
+    position: absolute;
+    display: none;
+    left: -200px;
+    top: 0;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: visible;
+    transition: left 0.3s ease,
+    box-shadow 0.3s ease;
+  	z-index: 999;
+}
+
+.main-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 2.5em 0 0;
+    /* Hide shadow -8px while 'closed' */
+    -webkit-box-shadow: -8px 0 8px rgba(0,0,0,.5);
+      -moz-box-shadow: -8px 0 8px rgba(0,0,0,.5);
+            box-shadow: -8px 0 8px rgba(0,0,0,.5);
+    min-height: 100%;
+    width: 200px;
+    background: #1a1a1a;
+}
+
+.main-menu a {
+    display: block;
+    padding: .75em 15px;
+    line-height: 1em;
+    font-size: 1em;
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 1px solid #383838;
+}
+
+.main-menu li:first-child a {
+   border-top: 1px solid #383838;
+}
+
+.main-menu a:hover,
+.main-menu a:focus {
+    background: #333;
+    text-decoration: underline;
+}
+
+.main-menu .menu-close {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+/* On small devices, allow it to toggle.*/
+.main-menu:target,
+.main-menu[aria-expanded="true"] {
+  display: block;
+  left: 0;
+  outline: none;
+  -moz-box-shadow: 3px 0 12px rgba(0,0,0,.25);
+  -webkit-box-shadow: 3px 0 12px rgba(0,0,0,.25);
+  box-shadow: 3px 0 12px rgba(0,0,0,.25);
+}
+
+.main-menu:target .menu-close,
+.main-menu[aria-expanded="true"] .menu-close {
+  z-index: 1001;
+}
+/* DROP DOWN END */
+
+/* Mobile  */
+@media screen and (max-width: 400px){    
+    #mainpadding {         
+        width: 100vw;
+    }
+}
+}
+
+
