@@ -1,10 +1,7 @@
 # Luke Lovekin's Portfolio
 
 Deployed Website -
-https://lukelovekin.github.io/portfolio-online-new/index.html
-
-Github Profile-
-https://github.com/lukelovekin/portfolio
+https://lukelovekin.github.io/portfolio1-html-css-only/
                
 <img src="./docs/homepage.PNG" alt="homepage" width="700"/>
 
